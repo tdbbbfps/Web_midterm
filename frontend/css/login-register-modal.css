@@ -1,0 +1,97 @@
+.login-register-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid #333;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: white;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.form-group div {
+    margin-bottom: 4px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: white;
+    box-sizing: border-box;
+    transition: border-color 0.25s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.form-footer {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hint {
+    color: #888;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+}
+
+.plain-text-button {
+    background-color: transparent;
+    color: #888;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.plain-text-button:hover {
+    color: #d5d5d5;
+    text-decoration: underline;
+}

@@ -1,0 +1,477 @@
+:root {
+    --background: #090e19;
+    --primary: #1a2e49;
+    --secondary: #415775;
+    --border: #334155;
+    --title: #ffffff;
+    --content: #aeb9c7;
+    --radius: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--background);
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 72px;
+    background-color: #1f335e;
+    border-bottom: var(--border) 1px solid;
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.navbar-title {
+    margin-right: auto;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.navbar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-btn:hover {
+    color: white;
+}
+
+.navbar-btn.active {
+    color: #0ea5e9;
+    border-bottom-color: #0ea5e9;
+}
+
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.navbar-right {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#profile-btn {
+    border: #0f172a 1px solid;
+    border-radius: 50%;
+    background-color: #182543;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #ffffff;
+}
+
+#profile-btn:hover {
+    color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+#profile-btn:active {
+    color: #4a5ee2;
+    border-color: #4a5ee2;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-dropdown p {
+    margin: 0;
+}
+
+/* Game frame and info */
+.game-iframe {
+    width: 80%;
+    height: 720px;
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    border: var(--border) 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.game-iframe:hover {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.game-info-bar {
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    border: var(--border) 1px solid;
+    line-height: 16px;
+    margin: 12px 0;
+    box-sizing: border-box;
+}
+
+.game-info-bar h2 {
+    color: var(--title);
+    margin: 0;
+}
+
+.game-info-bar p {
+    font-size: 16px;
+    color: var(--content);
+    margin: 0;
+}
+.game-info-bar-right {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+    font-size: 24px;
+}
+
+.game-introduction>h2,
+.game-announcement>h2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.announcement-card {
+    width: auto;
+    height: auto;
+}
+
+/* Grid */
+.grid-layout {
+    display: grid;
+    gap: 12px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.grid-col1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-introduction-announcement {
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    border: var(--border) 1px solid;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    padding: 8px;
+    margin: 8px;
+}
+
+.tab-content {
+    margin-top: 12px;
+}
+
+/* General ui */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #4f6bb8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.btn-primary:hover {
+    color: #4f6bb8;
+    background-color: white;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge {
+    font-size: 16px;
+    padding: 4px;
+    border-radius: var(--radius);
+}
+
+.badge-blue {
+    color: #4983ff;
+    background-color: #214370;
+}
+
+.badge-green {
+    color: #8cff49;
+    background-color: #337021;
+}
+
+.badge-red {
+    color: #ff4952;
+    background-color: #702121;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: auto;
+    height: auto;
+    background-color: #152342;
+    border-top: var(--border) 1px solid;
+    gap: 10px;
+}
+
+/* Trade area */
+:root {
+    --S-tier: #ffbc2c;
+    --A-tier: #ec19ff;
+    --B-tier: #194fff;
+    --C-tier: #62ff19;
+    --D-tier: #9b590e;
+    --E-tier: #b6b6b6;
+}
+
+#tab-market {
+    margin: 0px 8px 0px 8px;
+}
+
+.top-bar {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar>h1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 240px;
+    height: 48px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary);
+    border: var(--border) 1px solid;
+    padding: 0px 8px 0px 40px;
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.15);
+    transition: all 0.3s ease-out;
+}
+
+.search-bar:focus {
+    outline: none;
+    border: #6aaaff 1px solid;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+.search-bar-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aeb9c7;
+}
+
+.grid-market {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.market-item-card {
+    overflow: hidden;
+    background-color: var(--primary);
+    border: var(--border) 1px solid;
+    border-radius: var(--radius);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.market-item-card-S-tier:hover {
+    border: var(--S-tier) 1px solid;
+}
+
+.market-item-card-A-tier:hover {
+    border: var(--A-tier) 1px solid;
+}
+
+.market-item-card-B-tier:hover {
+    border: var(--B-tier) 1px solid;
+}
+
+.market-item-card-C-tier:hover {
+    border: var(--C-tier) 1px solid;
+}
+
+.market-item-card-D-tier:hover {
+    border: var(--D-tier) 1px solid;
+}
+
+.market-item-card-E-tier:hover {
+    border: var(--E-tier) 1px solid;
+}
+
+.market-item-image {
+    width: 100%;
+    height: 160px;
+    background-color: var(--secondary);
+}
+
+.market-card-content {
+    padding: 8px;
+}
+
+.market-item-name {
+    margin: 0 0 8px 0;
+}
+
+.market-item-description {
+    margin: 0 0 8px 0;
+}
+
+.price-purchase-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-container {
+    display: inline-flex;
+    border: var(--border) 1px solid;
+    background-color: #0f172a;
+    border-radius: 25px;
+    padding: 4px 8px 4px 8px;
+    width: auto;
+    height: 40px;
+    max-width: 120px;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+.price-container>p {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+}
+
+.price-icon {
+    width: 32px;
+    height: 32px;
+    color: rgb(255, 251, 27);
+}
+
+@media (max-width: 960px) {
+    .navbar-title {
+        font-size: 0;
+    }
+
+    .navbar-menu {
+        gap: 8px;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar-btn {
+        font-size: 0;
+        padding: 8px;
+    }
+
+    .icon-32 {
+        width: 28px;
+        height: 28px;
+        margin-right: 0;
+        vertical-align: middle;
+    }
+
+    .grid-introduction-announcement {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-market {
+        grid-template-columns: 1fr 1fr;
+    }
+}
